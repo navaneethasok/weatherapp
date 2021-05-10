@@ -7,7 +7,8 @@ import {Img} from 'react-image'
 const usestyles = makeStyles(theme=> ({
    
     container:{
-        width:theme.spacing(50),
+        minWidth:theme.spacing(20),
+        maxWidth:theme.spacing(50),
         padding:'5px 0px',
         margin: '50px auto',
         textAlign:'center',
