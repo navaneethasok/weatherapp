@@ -36,7 +36,7 @@ function App() {
     if(query){
         const getWeather = async () => {
         console.log('use effect has run');
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKEY}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKEY}&units=metric`);
         const responseJson = await response.json();
         if(response.ok){
           setData(responseJson);

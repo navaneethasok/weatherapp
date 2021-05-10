@@ -42,7 +42,7 @@ const WeatherComponent = ({name,main,weather}) => {
     const { icon,description } = weather[0];
     const { temp,feels_like,temp_min,temp_max } = main;
 
-    const iconUrl = icon ? `http://openweathermap.org/img/wn/${icon}@2x.png`:'' ;
+    const iconUrl = icon ? `https://openweathermap.org/img/wn/${icon}@2x.png`:'' ;
 
     const ImageComponent = () => <Img src={iconUrl} />
 
