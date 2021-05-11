@@ -5,7 +5,9 @@ import { TextField, makeStyles, Button, Grid } from '@material-ui/core';
 const usestyles = makeStyles(theme=> ({
 root:{
     
-    width:'40%',
+    minWidth:theme.spacing(20),
+    maxWidth:theme.spacing(50),
+    
     marginLeft:'auto',
     marginRight:'auto', 
     
@@ -27,11 +29,11 @@ const SearchComponent = ({ error=false,search,handleTextChange,handleSubmit }) =
  
         <form className={classes.root} onSubmit={handleSubmit} >
 
-            <Grid container  >
-            <Grid item lg={2} sm >
+            <Grid container style={{margin:'0px auto'}} >
+            <Grid item lg={1} sm >
                 </Grid>
-                <Grid item lg sm xs={12} style={{paddingLeft:'2em'}}  >
-                    <TextField style={{width:'100%'}} 
+                <Grid item lg sm xs={12} style={{paddingLeft:'1em',paddingRight:'1em',}}  >
+                    <TextField style={{minWidth:'80%',width:'100%'}} 
                      label='City'
                      value={search}
                      onChange={handleTextChange}
@@ -40,8 +42,10 @@ const SearchComponent = ({ error=false,search,handleTextChange,handleSubmit }) =
                       />
 
                 </Grid>
+                <Grid item lg={1} sm xs={4}  >
+                </Grid>
                 
-                <Grid item lg sm xs={12} style={{paddingTop:'1rem',paddingLeft:'2.5em'}} >
+                <Grid item lg sm xs style={{paddingTop:'1rem'}} >
                 <Button variant="outlined" type='submit' >Get Weather</Button>
                 </Grid>
             </Grid>
